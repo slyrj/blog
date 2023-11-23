@@ -1,3 +1,15 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home:
+  path: /home
+  controller: App\Controller\HomeController::index
+
+register:
+  path: /register
+  controller: App\Controller\RegistrationController::register
+
+verifyUserEmail:
+  path: /verify/email
+  controller: App\Controller\RegistrationController::verifyUserEmail
+
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login
