@@ -1,15 +1,15 @@
-home:
-  path: /home
+app_home:
+  path: /
   controller: App\Controller\HomeController::index
 
 register:
   path: /register
   controller: App\Controller\RegistrationController::register
 
-verifyUserEmail:
+app_verify_email:
   path: /verify/email
   controller: App\Controller\RegistrationController::verifyUserEmail
 
-login:
+app_login:
   path: /login
   controller: App\Controller\SecurityController::login
