@@ -13,10 +13,8 @@ class CommentType extends AbstractType
     {
         $builder
             ->add('content')
-            ->add('createdAt')
             ->add('article')
-            ->add('user')
-        ;
+            ->add('user');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
