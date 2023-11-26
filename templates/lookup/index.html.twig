@@ -3,13 +3,8 @@
 {% block title %}Hello LookupController!{% endblock %}
 
 {% block body %}
-<div>
-    <form action="">
-        <input type="search" name="search" placeholder="Recherche..." />
-        <button type="submit">Rechercher</button>
-    </form>
-</div>
-<table>
+<h1>Résultats de la recherche</h1>
+<h2 class="my-4">Nous avons retrouvé les articles suivants pour vous: </h2>
     {% for article in articles %}
         <tr>
             <td>{{ article.id }}</td>
@@ -20,9 +15,8 @@
             </td>
         </tr>
     {% else %}
-        <tr>
-            <td colspan="4">no records found</td>
-        </tr>
+      <div>
+        Aucun article trouvé
+      </div>
     {% endfor %}
-</table>
 {% endblock %}

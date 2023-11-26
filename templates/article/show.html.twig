@@ -5,29 +5,26 @@
 {% block body %}
     <h1>Article</h1>
 
-    <table class="table">
+    <table class="table m-5">
         <tbody>
+          
             <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ article.title }}</td>
             </tr>
             <tr>
-                <th>Content</th>
+                <th>Derscription</th>
                 <td>{{ article.content }}</td>
             </tr>
         </tbody>
     </table>
 
   <div>
-    <a href="{{ path('app_comment_new', {'id': article.id}) }}">Ajouter un commentaire</a>
+   <h2><a href="{{ path('app_comment_new', {'id': article.id}) }}">Ajouter un commentaire</a></h2> 
   </div>
 
 
-<div>
+<div class="mt-3">
     {% for comment in comments %}
         <div>{{ comment.user.email }} a écrit :</div>
         <div>{{ comment.content }}</div>
